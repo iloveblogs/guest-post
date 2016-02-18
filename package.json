@@ -1,0 +1,36 @@
+{
+  "name": "guest-post",
+  "version": "1.0.0",
+  "description": "lista de blogs que aceitam guest post.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iloveblogs/guest-post.git"
+  },
+  "keywords": [
+    "guest",
+    "post",
+    "convidado",
+    "blogs",
+    "inbound"
+  ],
+  "author": "jota teles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iloveblogs/guest-post/issues"
+  },
+  "homepage": "https://github.com/iloveblogs/guest-post#readme",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-copy": "0.0.2",
+    "gulp-inject": "^3.0.0",
+    "gulp-load-tasks": "^0.8.4"
+  }
+}

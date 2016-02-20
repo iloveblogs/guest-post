@@ -17,5 +17,5 @@ npm install
 ###2. Instalou as dependências. Rode o projeto:
 
 ```bash
-gulp copy inject
+gulp copy && gulp inject
 ```

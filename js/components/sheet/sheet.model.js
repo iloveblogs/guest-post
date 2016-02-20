@@ -24,6 +24,7 @@
                 init: init,
                 getSheetContent: getSheetContent,
                 sheetsuBaseURL: sheetsuBaseURL,
+                blogsList: null
             };            
 
             return model;

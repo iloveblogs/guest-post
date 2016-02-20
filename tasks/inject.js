@@ -5,6 +5,7 @@ module.exports = function() {
 
 	var staticFilesList = [
 		'./css/**/*.css',
+		'./js/lib/angular.*.js',
 		'./js/lib/**/*.js',
 		'./js/base.js',
 		'./js/*.js',

@@ -1,16 +1,23 @@
 var gulp = require('gulp');
 var gulpCopy = require('gulp-copy');
+var merge = require('merge-stream');
+
 
 module.exports = function() {
 
-	var jsFilesToCopyFromNodeModulesFolder = [
-		'./node_modules/angular/angular.min.js',
-	];
+	var angularSourceFolder = ['./node_modules/angular/angular.min.js'];
+	var uiRouterSourceFolder = ['./node_modules/angular-ui-router/release/angular-ui-router.min.js'];
 
-	var jsOutputFolder = './js/lib';
+	var javascriptDestFolder = './js/lib';
 
-	var copyOptions = {prefix: 2};
+	var angularCopyOptions = {prefix: 2};
+	var uiRouterCopyOptions = {prefix: 3};
 
-	return gulp.src(jsFilesToCopyFromNodeModulesFolder)
-  			.pipe(gulpCopy(jsOutputFolder, copyOptions));
+	var angularCopy = gulp.src(angularSourceFolder)			
+			  		.pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
+
+	var uiRouterCopy = gulp.src(uiRouterSourceFolder)
+					.pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
+
+	return merge(angularCopy, uiRouterCopy);
 };

@@ -28,9 +28,11 @@
     "gulp": "^3.9.1"
   },
   "devDependencies": {
+    "angular-ui-router": "^0.2.18",
     "gulp": "^3.9.1",
     "gulp-copy": "0.0.2",
     "gulp-inject": "^3.0.0",
-    "gulp-load-tasks": "^0.8.4"
+    "gulp-load-tasks": "^0.8.4",
+    "merge-stream": "^1.0.0"
   }
 }

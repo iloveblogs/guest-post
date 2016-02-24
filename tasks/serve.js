@@ -1,4 +1,5 @@
 module.exports = [[
     'inject',
-    'connect'
+    'connect',
+    'open'
 ]];

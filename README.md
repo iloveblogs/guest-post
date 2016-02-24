@@ -19,3 +19,5 @@ npm install
 ```bash
 gulp copy && gulp serve
 ```
+
+Your browser will open Chrome or Firefox browser (if you have one of two installed)

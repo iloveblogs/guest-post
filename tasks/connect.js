@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 module.exports = function() {
 	return gulp.task('connect', function() {
 			  connect.server({
-			  	root : './'
+			  	root : './build/'
 			  });
 			});
 };

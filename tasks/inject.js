@@ -4,26 +4,26 @@ var inject = require('gulp-inject');
 module.exports = function() {
 
 	var staticFilesList = [
-		'./css/**/*.css',
-		'./js/lib/angular.*.js',
-		'./js/lib/**/*.js',
-		'./js/base.js',
-		'./js/*.js',
-		'./js/**/*.module.js',
-		'./js/**/*.factory.js',
-		'./js/**/*.directive.js',
-		'./js/**/*.js',
+		'./build/css/**/*.css',
+		'./build/js/lib/angular.*.js',
+		'./build/js/lib/**/*.js',
+		'./build/js/base.js',
+		'./build/js/*.js',
+		'./build/js/**/*.module.js',
+		'./build/js/**/*.factory.js',
+		'./build/js/**/*.directive.js',
+		'./build/js/**/*.js',
 		'!gulpfile.js',
 		'!./tasks/*.js',
 	];
 
 	var injectOptions = {
-		addRootSlash: false,
+		ignorePath: 'build/'
 	};
 
 	return gulp.src('src/index.html')
-		.pipe(inject(gulp.src(staticFilesList, {read: false}), injectOptions))
-		.pipe(gulp.dest('./'));
+		.pipe(inject(gulp.src(staticFilesList, {read: true}), injectOptions))
+		.pipe(gulp.dest('./build'));
 };
 
 

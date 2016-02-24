@@ -8,7 +8,7 @@ module.exports = function() {
 	var angularSourceFolder = ['./node_modules/angular/angular.min.js'];
 	var uiRouterSourceFolder = ['./node_modules/angular-ui-router/release/angular-ui-router.min.js'];
 
-	var javascriptDestFolder = './js/lib';
+	var javascriptDestFolder = './build/js/lib';
 
 	var angularCopyOptions = {prefix: 2};
 	var uiRouterCopyOptions = {prefix: 3};
@@ -19,5 +19,12 @@ module.exports = function() {
 	var uiRouterCopy = gulp.src(uiRouterSourceFolder)
 					.pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
 
-	return merge(angularCopy, uiRouterCopy);
+	var jsPath = gulp.src([
+					'./src/js/**/*.js',
+					'./src/js/**/*.html',
+					'./src/js/**/*.css'
+					])
+				.pipe(gulp.dest('./build/js'));
+
+	return merge(angularCopy, uiRouterCopy, jsPath);
 };

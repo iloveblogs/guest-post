@@ -14,8 +14,8 @@ Cadastre agora mesmo seu blog na nossa lista de blogs que aceitam guest post!
 npm install
 ```
 
-###2. Instalou as dependências. Rode o projeto:
+### 2. Instalou as dependências. Rode o projeto:
 
 ```bash
-gulp copy && gulp inject
+gulp
 ```

@@ -13,7 +13,7 @@ module.exports = function() {
 		'./js/**/*.factory.js',
 		'./js/**/*.directive.js',
 		'./js/**/*.js',
-		'!Gulpfile.js',
+		'!gulpfile.js',
 		'!./tasks/*.js',
 	];
 

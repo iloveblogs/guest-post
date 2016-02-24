@@ -20,4 +20,4 @@ npm install
 gulp copy && gulp serve
 ```
 
-Será aberto seu navegador (Crhome ou Firefox, se tiver um dos dois instalados) no endereço: `localhost:4000`.
+Será aberto seu navegador (Chrome ou Firefox, se tiver um dos dois instalados) no endereço: `localhost:4000`.

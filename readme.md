@@ -21,3 +21,11 @@ gulp copy && gulp serve
 ```
 
 Será aberto seu navegador (Chrome ou Firefox, se tiver um dos dois instalados) no endereço: `localhost:4000`.
+
+### 3. Está rodando o projeto? Deixa o watch ligado.
+
+Abra um novo terminal (junto com o terminal que roda o comando acima) e deixe o gulp watch rodando:
+
+```bash
+gulp watch
+```

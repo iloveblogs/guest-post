@@ -1,5 +1,11 @@
 var gulp = require('gulp');
 
 module.exports = function() {
-    gulp.watch(['src/js/**/*.js', 'src/js/**/*.html'], ['copy', 'inject']);
+    var files = [
+        'src/js/**/*.js',
+        'src/js/**/*.html',
+        'src/styl/**/*.styl'
+    ];
+
+    gulp.watch(files, ['copy', 'inject', 'styl']);
 };

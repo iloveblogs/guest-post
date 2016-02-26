@@ -13,15 +13,9 @@ module.exports = function() {
 	var angularCopyOptions = {prefix: 2};
 	var uiRouterCopyOptions = {prefix: 3};
 
-	var angularCopy = gulp.src([
-						angularSourceFolder
-					])
-			  		.pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
+	var angularCopy = gulp.src(angularSourceFolder).pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
 
-	var uiRouterCopy = gulp.src([
-							uiRouterSourceFolder
-					])
-					.pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
+	var uiRouterCopy = gulp.src(uiRouterSourceFolder).pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
 
 	var jsPath = gulp.src([
 					'./src/js/**/*.js',

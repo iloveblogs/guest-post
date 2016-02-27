@@ -10,8 +10,6 @@
 
         var filters = {};
 
-        console.log(SheetApi);
-
         var promise = SheetApi.getById('1', filters);
 
         promise.success(function(blogs){

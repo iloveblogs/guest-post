@@ -28,7 +28,8 @@
 
             var restApi = {
                 getById: getById,
-                getAllBlogs: getAllBlogs
+                getAllBlogs: getAllBlogs,
+                configure: configure
             };
             return restApi;
 
@@ -41,7 +42,7 @@
                     baseQuery = baseQuery;
                 }
 
-                baseQuery += ' where url="'+configure.sheetsuBaseUrl+'"';
+                baseQuery += ' where url="'+restApi.configure.sheetsuBaseUrl+'"';
                 return baseQuery;
             }
 
@@ -67,6 +68,5 @@
             }
         }
     }
-
 
 })();

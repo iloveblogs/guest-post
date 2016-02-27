@@ -7,6 +7,7 @@ module.exports = function() {
 		'./build/css/**/*.css',
 		'./build/js/lib/angular.*.js',
 		'./build/js/lib/**/*.js',
+		'./build/js/utils.js',
 		'./build/js/base.js',
 		'./build/js/*.js',
 		'./build/js/**/*.module.js',

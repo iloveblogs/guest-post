@@ -8,9 +8,7 @@
         var vc = this;
         AlertsModel.pushAlert( { type : 'success', message : 'Meu pastel é mais barato' } );
 
-        var filters = {};
-
-        var promise = SheetApi.getById('1', filters);
+        var promise = SheetApi.getById('1');
 
         promise.success(function(blogs){
             console.log(blogs);

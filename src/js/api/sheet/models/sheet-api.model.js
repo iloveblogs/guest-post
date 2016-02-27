@@ -47,6 +47,7 @@
             }
 
             function getById(id, filters){
+                var filters = filters || {};
                 var query = _parseFiltersToQuery(filters);
                 query+=' and json.id='+id;
                 var params = {
@@ -57,6 +58,7 @@
             }
 
             function getAllBlogs(filters){
+                var filters = filters || {};
                 var query = _parseFiltersToQuery(filters);
 
                 var params = {

@@ -28,6 +28,7 @@
 
             var restApi = {
                 getById: getById,
+                getByIds: getByIds,
                 getAllBlogs: getAllBlogs,
                 configure: configure
             };
@@ -50,6 +51,17 @@
                 var filters = filters || {};
                 var query = _parseFiltersToQuery(filters);
                 query+=' and json.id='+id;
+                var params = {
+                    q: query,
+                    format: 'json'
+                };
+                return AjaxModel.get(baseYQLUrl, params);
+            }
+
+            function getByIds(ids, filters){
+                var filters = filters || {};
+                var query = _parseFiltersToQuery(filters);
+                query+=' and json.id IN ('+ids+')';
                 var params = {
                     q: query,
                     format: 'json'

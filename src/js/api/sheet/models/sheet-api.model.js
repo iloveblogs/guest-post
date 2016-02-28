@@ -40,9 +40,8 @@
             function _parseFiltersToQuery(filters){
                 var baseQuery = 'select json from json';
 
-                if(filters.pageStart && filters.pageSize){
+                if(filters.hasOwnProperty('pageStart') && filters.hasOwnProperty('pageSize')){
                     baseQuery+='({0}, {1})'.format(filters.pageStart, filters.pageSize);
-                    baseQuery = baseQuery;
                 }
 
                 baseQuery += ' where url="'+restApi.configure.sheetsuBaseUrl+'"';

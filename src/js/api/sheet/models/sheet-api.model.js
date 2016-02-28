@@ -27,9 +27,11 @@
             var baseYQLUrl = "https://query.yahooapis.com/v1/public/yql";
 
             var restApi = {
+                getAllBlogs: getAllBlogs,
+                getByCategoria: getByCategoria,
                 getById: getById,
                 getByIds: getByIds,
-                getAllBlogs: getAllBlogs,
+                getByUrl: getByUrl,
                 configure: configure
             };
             return restApi;
@@ -62,6 +64,29 @@
                 var filters = filters || {};
                 var query = _parseFiltersToQuery(filters);
                 query+=' and json.id IN ('+ids+')';
+                var params = {
+                    q: query,
+                    format: 'json'
+                };
+                return AjaxModel.get(baseYQLUrl, params);
+            }
+
+            function getByCategoria(categoria, filters){
+                var filters = filters || {};
+                var query = _parseFiltersToQuery(filters);
+                query+=' and json.categorias like "%'+categoria+'%"';
+                var params = {
+                    q: query,
+                    format: 'json'
+                };
+                return AjaxModel.get(baseYQLUrl, params);
+            }
+
+            function getByUrl(url, filters){
+                var filters = filters || {};
+                var query = _parseFiltersToQuery(filters);
+                query+=' and json.url = "'+url+'"';
+
                 var params = {
                     q: query,
                     format: 'json'

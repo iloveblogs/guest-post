@@ -1,7 +1,7 @@
 (function(){
     angular.module('guest-post.blog-box').directive('blogBox', BlogBoxDirective);
 
-    function BlogBoxDirective(BlogBoxModel){
+    function BlogBoxDirective(){
         var directive = {
             restrict: 'E',
             replace: true,

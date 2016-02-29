@@ -3,7 +3,6 @@
 
     function BlogBoxController(){
         var vc =  this;
-        // vc.vm = BlogBoxModel;
     }
 
 })();

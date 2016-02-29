@@ -1,0 +1,40 @@
+spacings = (0 8px 16px 24px 32px)
+
+get-spacing(spacing-index)
+    spacings[spacing-index]
+
+spacing-directions = (top right bottom left)
+
+for spacing, i in spacings
+    for spacing-direction in spacing-directions
+
+        .p-margin-{spacing-direction}-{i}
+            margin-{spacing-direction}: spacing !important
+
+        .p-padding-{spacing-direction}-{i}
+            padding-{spacing-direction}: spacing !important
+
+        .p-margin-horizontal-{i}
+            margin-left: spacing !important
+            margin-right: spacing !important
+
+        .p-padding-horizontal-{i}
+            padding-left: spacing !important
+            padding-right: spacing !important
+
+        .p-margin-vertical-{i}
+            margin-top: spacing !important
+            margin-bottom: spacing !important
+
+        .p-padding-vertical-{i}
+            padding-top: spacing !important
+            padding-bottom: spacing !important
+
+        .p-padding-{i}
+            padding: spacing !important
+
+        .p-margin-{i}
+            margin: spacing !important
+
+        .teste
+            padding: get-spacing(1)

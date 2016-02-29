@@ -1,5 +1,6 @@
 <div>
-    <div ng-repeat='blog in vc.blogs'>
+    <img src="images/animat-essential/search/animat-search-color.gif" ng-if='vc.isLoadingPromise'>
+    <div ng-repeat='blog in vc.blogs' style='width:25%;float:left;' class='p-padding-right-1'>
         <blog-box blog='blog.json'></blog-box>
     </div>
 </div>

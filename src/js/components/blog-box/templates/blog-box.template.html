@@ -1,8 +1,10 @@
-<div>
-    <p ng-bind='vc.blog.id'></p>
-    <p ng-bind='vc.blog.descricao'></p>
-    <p ng-bind='vc.blog.categorias'></p>
-    <p ng-bind='vc.blog.regras'></p>
-    <p ng-bind='vc.blog.url'></p>
-    <p ng-bind='vc.blog.email'></p>
+<div class='blog-box'>
+    <div class="blog-box__body">
+        <h3 ng-bind='vc.blog.id' class='blog-box__title'></h3>
+        <a ng-href='vc.blog.url' class='blog-box__link'></a>
+        <p class='blog-box__description'>{[{vc.blog.descricao | limitTo: 140}]}...</p>
+    </div>
+    <footer class='blog-box__footer'>
+        <span class='blog-box__icon-like'>♥</span>
+    </footer>
 </div>

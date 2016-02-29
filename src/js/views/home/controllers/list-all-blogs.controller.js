@@ -12,9 +12,11 @@
         // var promise = SheetApi.getByCategoria('moda');
         var promise = SheetApi.getAllBlogs({pageStart: 0, pageSize: 15});
         // var promise = SheetApi.getAllBlogs();
+        vc.isLoadingPromise = true;
 
         promise.success(function(blogs){
             vc.blogs = blogs.query.results.json;
+            vc.isLoadingPromise = false;
         });
 
     }

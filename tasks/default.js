@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var runSequence = require('run-sequence');
 
 module.exports = function() {
     var files = [
@@ -7,5 +8,7 @@ module.exports = function() {
         'src/styl/**/*.styl'
     ];
 
-    gulp.watch(files, ['copy', 'inject', 'styl']);
+    runSequence('copy', 'styl', 'inject', 'connect', 'open');
+
+    gulp.watch(files, ['build']);
 };

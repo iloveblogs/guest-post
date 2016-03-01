@@ -17,15 +17,9 @@ npm install
 ### 2. Instalou as dependências. Rode o projeto:
 
 ```bash
-gulp copy && gulp serve
+gulp
 ```
 
 Será aberto seu navegador (Chrome ou Firefox, se tiver um dos dois instalados) no endereço: `localhost:4000`.
 
-### 3. Está rodando o projeto? Deixa o watch ligado.
-
-Abra um novo terminal (junto com o terminal que roda o comando acima) e deixe o gulp watch rodando:
-
-```bash
-gulp watch
-```
+Basta codificar e as tasks de build já estarão funcionando via watch.

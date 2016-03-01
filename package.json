@@ -23,13 +23,9 @@
     "url": "https://github.com/iloveblogs/guest-post/issues"
   },
   "homepage": "https://github.com/iloveblogs/guest-post#readme",
-  "dependencies": {
-    "angular": "^1.5.0",
-    "gulp": "^3.9.1",
-    "gulp-open": "^1.0.0"
-  },
   "devDependencies": {
-    "angular-ui-router": "^0.2.18",
+    "gulp": "^3.9.1",
+    "gulp-open": "^1.0.0",
     "gulp-connect": "^2.3.1",
     "gulp-copy": "0.0.2",
     "gulp-inject": "^3.0.0",

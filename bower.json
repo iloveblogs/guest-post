@@ -1,0 +1,30 @@
+{
+  "name": "guest-post",
+  "description": "lista de blogs que aceitam guest post.",
+  "main": "index.js",
+  "authors": [
+    "jota teles"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "guest",
+    "post",
+    "convidado",
+    "blogs",
+    "inbound"
+  ],
+  "homepage": "https://github.com/iloveblogs/guest-post",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-ui-router": "~0.2.18"
+  }
+}

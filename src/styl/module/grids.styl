@@ -1,0 +1,42 @@
+// Mapas para sistemas de grids e afins
+breakpoints-map-min = { phone: screen-phone-min, tablet: screen-tablet-min, desktop: screen-desktop-min, monitor: screen-monitor-min}
+breakpoints-map-max = { phone: screen-phone-max, tablet: screen-tablet-max, desktop: screen-desktop-max, monitor: screen-monitor-max}
+
+grid-number-of-columns = 12 !default
+
+m-generate-column(column-width)
+    position: relative
+    min-height: 1px
+    width: column-width
+    float: left
+
+m-generate-offset(offset-width)
+    position: relative
+    min-height: 1px
+    margin-left: column-width
+    float: left
+
+.row
+    m-clearfix
+    box-sizing: border-box
+
+*[class^='col-'],
+*[class*=' col-']
+    box-sizing: border-box
+    &:before,
+    &:after
+        box-sizing: border-box
+
+for breakpoint-name, breakpoint-value in breakpoints-map-min
+    for i in (1..grid-number-of-columns)
+        @media (min-width: breakpoint-value)
+            .col-{breakpoint-name}-{i}
+                m-generate-column((100% / grid-number-of-columns) * i)
+
+            .col-offset-{breakpoint-name}-{i}
+                m-generate-column((100% / grid-number-of-columns) * i)
+
+
+for i in (1..grid-number-of-columns)
+    .col-{i}
+        m-generate-column((100% / grid-number-of-columns) * i)

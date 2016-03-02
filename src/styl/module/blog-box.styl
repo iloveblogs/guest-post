@@ -2,14 +2,37 @@
     box-shadow: 0 2px 1px rgba(170, 170, 170, .25)
     background-color: #fff
     border-radius: 3px
+    border-bottom: 3px solid #999
+    cursor: pointer
+    transition: all ease-in .5s
+    position: relative
+
+    &:hover
+        border-bottom: 3px solid #247ba0
+        top: - get-spacing(1)
+
     &__title
         font-size: 16px
+
     &__body
         padding: get-spacing(2) get-spacing(2) 0 get-spacing(2)
+        flex: 1 0 auto
     // &__link
+
     &__description
         font-size: 13px
         color: #666
+
     &__footer
         padding: get-spacing(2)
         border-top: 1px solid #eee
+        color: #666
+        font-size: 12px
+
+    &__icon-like
+        float: right
+        cursor: pointer
+        transition: all ease-in .5s
+        color: #999
+        &:hover
+            color: #ff1654

@@ -9,7 +9,6 @@
 
     &:hover
         border-bottom: 3px solid #247ba0
-        top: - get-spacing(1)
 
     &__title
         font-size: 16px
@@ -17,7 +16,20 @@
     &__body
         padding: get-spacing(2) get-spacing(2) 0 get-spacing(2)
         flex: 1 0 auto
-    // &__link
+
+    &__link
+        color: inherit
+        display: inline-block
+        max-width: calc(100% - 20px)
+        overflow: hidden
+        text-decoration: none
+        text-overflow: ellipsis
+        vertical-align: middle
+        white-space: nowrap
+        word-wrap: normal
+
+        &:hover
+            color: #247ba0
 
     &__description
         font-size: 13px
@@ -34,5 +46,6 @@
         cursor: pointer
         transition: all ease-in .5s
         color: #999
+        vertical-align: middle
         &:hover
             color: #ff1654

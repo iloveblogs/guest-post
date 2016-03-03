@@ -1,4 +1,6 @@
 (function(){
+    "use strict";
+
     angular.module('guest-post.blog-box').directive('blogBox', BlogBoxDirective);
 
     function BlogBoxDirective(){

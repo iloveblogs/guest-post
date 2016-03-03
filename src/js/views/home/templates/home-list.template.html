@@ -1,4 +1,14 @@
 <div>
+
+    <header class="jumbotron">
+        <h1 class="jumbotron__title">Blogs que aceitam guest post</h1>
+        <h2 class='jumbotron__subtitle'>
+            <span>Mais de 150 blogs sobre assuntos variados que aceitam posts de convidados. </span>
+            <a href="/sobre">Conheça nossa proposta.</a></h2>
+
+        <input type="text" placeholder="Encontre um blog" class='jumbotron__search-input'>
+    </header>
+
     <img src="images/animat-essential/search/animat-search-color.gif" ng-if='vc.isLoadingPromise'>
     <div class="blog-box-flex-list">
         <blog-box blog='blog.json' ng-repeat='blog in vc.blogs' class="blog-box-flex-item"></blog-box>

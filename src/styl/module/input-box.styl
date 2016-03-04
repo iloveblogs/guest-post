@@ -1,0 +1,32 @@
+.input-box
+    line-height: 40px
+    width: 480px
+    margin: get-spacing(3) auto
+    font-size: 18px
+    max-width: 100%
+    display: block
+    position: relative
+
+    &__input
+        outline: none
+        border: 1px solid rgb(28, 131, 176)
+        border-radius: 42px
+        padding: get-spacing(1) 46px get-spacing(1) get-spacing(3)
+        width: 100%
+        max-width: 480px
+        line-height: inherit
+
+    &__icon
+        line-height: inherit
+        position: absolute
+        right: 0
+        top: 1px
+        color: #ff5858
+        padding: get-spacing(1) get-spacing(2)
+        cursor: pointer
+        transition: all ease-in .5s
+        &:hover
+            color: #ff2424
+
+    + m-placeholder()
+        color: #d8d8d8

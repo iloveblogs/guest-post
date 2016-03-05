@@ -24,6 +24,7 @@
         vertical-align: middle
         white-space: nowrap
         word-wrap: normal
+        padding: get-spacing(2) 0 get-spacing(2) get-spacing(2)
 
         &:hover
             color: #247ba0
@@ -33,10 +34,11 @@
         color: #666
 
     &__footer
-        padding: get-spacing(2)
+        padding: 0
         border-top: 1px solid #eee
         color: #666
         font-size: 12px
+        min-height: 45px
 
     &__icon-like
         float: right
@@ -44,5 +46,9 @@
         transition: all ease-in .5s
         color: #999
         vertical-align: middle
+        padding: get-spacing(2)
+        position: relative
+        top: 3px // ajuste arbitrário :(
         &:hover
             color: #ff1654
+            animation: pulse .5s infinite alternate ease-in

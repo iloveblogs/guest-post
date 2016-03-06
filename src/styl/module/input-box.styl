@@ -33,3 +33,24 @@
         &:hover
             color: #ff2424
 
+    // &--is-extra-large
+    &--is-default
+        width: 240px
+        line-height: 20px
+        padding: get-spacing(1)
+        margin: 0
+
+        .input-box__input
+            padding-right: get-spacing(3)
+            font-size: 13px
+            border-radius: 20px
+            padding-left: get-spacing(2)
+
+            + m-placeholder()
+                font-size: 13px
+
+        .input-box__icon
+            padding: 0 20px 0 get-spacing(1)
+            line-height: 55px
+            font-size: 14px
+            top: 0

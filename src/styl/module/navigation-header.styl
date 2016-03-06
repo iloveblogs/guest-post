@@ -3,10 +3,35 @@
     width: 100%
     top: 0
     z-index: get-z-index(navigation)
+    padding: 0
+
+    @media (min-width: screen-tablet-min)
+        padding: 0 get-spacing(2)
 
     &__content
-        margin: 0 auto
-        display: block
-        max-width: 960px
-        padding: get-spacing(2)
         color: #fff
+        display: flex
+        margin: 0 auto
+        max-width: 960px
+        min-height: 40px
+        padding: 0
+        flex-direction: column
+
+    &__logo
+        height: 20px
+
+    &__input-box
+        align-self: flex-end
+
+        .input-box__input
+            background-color: #5babc8
+            color: #fff
+
+            + m-placeholder()
+                color: #fff
+
+        .input-box__icon
+            color: #fff
+
+    &--is-fixed
+        background-color: rgba(28, 131, 176, .9)

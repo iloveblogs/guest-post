@@ -25,11 +25,12 @@
   "homepage": "https://github.com/iloveblogs/guest-post#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-open": "^1.0.0",
     "gulp-connect": "^2.3.1",
     "gulp-copy": "0.0.2",
     "gulp-inject": "^3.0.0",
     "gulp-load-tasks": "^0.8.4",
+    "gulp-open": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-stylus": "^2.3.0",
     "merge-stream": "^1.0.0",
     "run-sequence": "^1.1.5"

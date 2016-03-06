@@ -4,7 +4,7 @@ var runSequence = require('run-sequence');
 module.exports = function() {
     var files = [
         'src/js/**/*.js',
-        'src/js/**/*.html',
+        'src/**/*.html',
         'src/styl/**/*.styl'
     ];
 

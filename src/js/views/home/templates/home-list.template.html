@@ -1,18 +1,5 @@
 <div>
-    <header class="jumbotron">
-        <div class="jumbotron__content">
-            <h1 class="jumbotron__title">Blogs que aceitam guest post</h1>
-            <h2 class='jumbotron__subtitle'>
-                Mais de 150 blogs sobre assuntos variados que aceitam posts de convidados.
-            </h2>
-            <a href="/sobre" class="jumbotron__main-link">Conheça nossa proposta.</a></h2>
-            <span class="input-box input-box--is-extra-large">
-                <input type="text" placeholder="Encontre um blog" class='input-box__input'>
-                <i class="fa fa-search input-box__icon"></i>
-            </span>
-        </div>
-    </header>
-
+    <jumbotron></jumbotron>
     <img src="images/animat-essential/search/animat-search-color.gif" ng-if='vc.isLoadingPromise'>
     <div class="blog-box-flex-list">
         <blog-box blog='blog.json' ng-repeat='blog in vc.blogs' class="blog-box-flex-item"></blog-box>

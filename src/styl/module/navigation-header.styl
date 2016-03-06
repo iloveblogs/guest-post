@@ -4,6 +4,7 @@
     top: 0
     z-index: get-z-index(navigation)
     padding: 0
+    line-height: 40px
 
     @media (min-width: screen-tablet-min)
         padding: 0 get-spacing(2)
@@ -21,17 +22,29 @@
         height: 20px
 
     &__input-box
-        align-self: flex-end
+        align-self: flex-start
+        @media (min-width: screen-tablet-min)
+            align-self: flex-end
 
         .input-box__input
             background-color: #5babc8
             color: #fff
+            &:hover
+                color: #fff
 
             + m-placeholder()
                 color: #fff
 
         .input-box__icon
             color: #fff
+
+
+    &__breadcrumb
+        line-height: inherit
+        &__item
+            font-size: 13px
+            color: #fff
+            text-decoration: none
 
     &--is-fixed
         background-color: rgba(28, 131, 176, .9)

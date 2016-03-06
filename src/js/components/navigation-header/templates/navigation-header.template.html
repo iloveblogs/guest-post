@@ -1,9 +1,19 @@
 <div class='navigation-header navigation-header--is-fixed'>
     <div class="navigation-header__content">
-<!--         <img src='images/ilove-blogs-logo.png' class='navigation-header__logo'> -->
-        <span class="input-box input-box--is-default navigation-header__input-box">
+
+        <span class='navigation-header__breadcrumb'>
+            <a href='http://iloveblogs.github.io' class='navigation-header__breadcrumb__item'>
+                <img src='images/ilove-blogs-logo.png' class='navigation-header__logo p-vertical-align-middle'>
+            </a>
+            <a ui-sref='home'
+                class='navigation-header__breadcrumb__item p-vertical-align-middle p-margin-left-1'>
+                / guest post
+            </a>
+        </span>
+
+<!--         <span class="input-box input-box--is-default navigation-header__input-box">
             <input type="text" placeholder="Encontre um blog" class='input-box__input'>
             <i class="fa fa-search input-box__icon"></i>
-        </span>
+        </span> -->
     </div>
 </div>

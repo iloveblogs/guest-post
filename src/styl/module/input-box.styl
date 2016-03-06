@@ -1,56 +1,60 @@
 .input-box
-    line-height: 40px
-    width: 480px
-    margin: get-spacing(3) auto
-    font-size: 18px
-    max-width: 100%
     display: block
+    font-size: 18px
+    line-height: 20px
+    margin: 0
+    max-width: 100%
+    padding: get-spacing(1)
     position: relative
+    width: 240px
 
     &__input
-        outline: none
+        border-radius: 20px
         border: 1px solid rgb(28, 131, 176)
-        border-radius: 42px
-        padding: get-spacing(1) 46px get-spacing(1) get-spacing(3)
-        width: 100%
-        max-width: 480px
-        font-size: 18px
+        font-size: 13px
         line-height: inherit
+        max-width: 480px
+        outline: none
+        padding: get-spacing(1) get-spacing(1) get-spacing(1) get-spacing(3)
+        width: 100%
 
         + m-placeholder()
             color: #d8d8d8
-            font-size: 18px
+            font-size: 13px
 
     &__icon
-        line-height: inherit
+        color: #ff5858
+        cursor: pointer
+        font-size: 14px
+        line-height: 54px
+        padding: 0 20px 0 get-spacing(1)
         position: absolute
         right: 0
-        top: 1px
-        color: #ff5858
-        padding: get-spacing(1) get-spacing(2)
-        cursor: pointer
+        top: 0
         transition: all ease-in .5s
+
         &:hover
             color: #ff2424
 
-    // &--is-extra-large
-    &--is-default
-        width: 240px
-        line-height: 20px
-        padding: get-spacing(1)
-        margin: 0
+    &--is-extra-large
+        line-height: 40px
+        margin: get-spacing(3) auto
+        width: 480px
 
         .input-box__input
             padding-right: get-spacing(3)
             font-size: 13px
             border-radius: 20px
             padding-left: get-spacing(2)
+            border-radius: 42px
+            font-size: 18px
+            padding: get-spacing(1) 46px get-spacing(1) get-spacing(3)
 
             + m-placeholder()
-                font-size: 13px
+                font-size: 18px
 
         .input-box__icon
-            padding: 0 20px 0 get-spacing(1)
-            line-height: 55px
-            font-size: 14px
-            top: 0
+            line-height: 70px
+            padding: 0 get-spacing(3)
+            top: 1px
+            font-size: 20px

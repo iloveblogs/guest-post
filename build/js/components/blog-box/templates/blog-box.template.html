@@ -1,0 +1,16 @@
+<div class='blog-box'>
+    <div class="blog-box__body">
+        <h3 ng-bind='vc.blog.id' class='blog-box__title'></h3>
+        <p class='blog-box__description'>{[{vc.blog.descricao | limitTo: 180}]} <span ng-show='vc.blog.descricao.length > 180'>...</span></p>
+    </div>
+    <footer class='blog-box__footer'>
+
+        <a  ng-href='{[{vc.blog.url}]}'
+            class='blog-box__link'
+            target="_blank">{[{vc.blog.url | removeUrlParts }]}</a>
+
+        <span class="p-float-right">
+            <i class='blog-box__icon-like fa fa-heart' title='Curtir esse blog'></i>
+        </span>
+    </footer>
+</div>

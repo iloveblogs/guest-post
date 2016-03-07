@@ -45,18 +45,16 @@
                 color: #fff
 
 
-    &__breadcrumb
+    + element(breadcrumb)
         line-height: inherit
-        margin-left: get-spacing(1)
-        &__item
+        margin-left: get-spacing(2)
+
+        + element(item)
             font-size: 13px
             color: #fff
             text-decoration: none
             border: 0
 
-    &--is-fixed
+    + modifier(is-fixed)
         background-color: rgba(28, 131, 176, .9)
         position: fixed
-
-        &__input-box
-            display: initial

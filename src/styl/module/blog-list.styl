@@ -4,15 +4,19 @@
         max-width: 960px
         margin: get-spacing(3) auto get-spacing(1) auto
         padding: 0 get-spacing(2) 0 (get-spacing(2) + get-spacing(2))
-        font-size: 22px
         font-weight: 400
+        font-size: 16px
+        @media (min-width: screen-tablet-min)
+            font-size: 22px
 
     + element(subtitle)
         color: #666
         max-width: 960px
         margin: 0 auto get-spacing(1) auto
         padding: 0 get-spacing(2) 0 (get-spacing(2) + get-spacing(2))
-        font-size: 15px
+        font-size: 12px
+        @media (min-width: screen-tablet-min)
+            font-size: 15px
 
     + element(flex-grid)
         display: flex

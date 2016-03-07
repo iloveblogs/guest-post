@@ -10,7 +10,7 @@
 
         // var promise = SheetApi.getByIds(['1', '2', '3', '4', '5']);
         // var promise = SheetApi.getByCategoria('moda');
-        var promise = SheetApi.getAllBlogs({pageStart: 0, pageSize: 12});
+        var promise = SheetApi.getAllBlogs({pageStart: 0, pageSize: 120});
         // var promise = SheetApi.getAllBlogs();
         vc.isLoadingPromise = true;
 

@@ -1,10 +1,10 @@
 .navigation-header
-    position: fixed
     width: 100%
     top: 0
     z-index: get-z-index(navigation)
     padding: 0
     line-height: 40px
+    position: absolute
 
     @media (min-width: screen-tablet-min)
         padding: 0 get-spacing(2)
@@ -16,13 +16,16 @@
         max-width: 960px
         min-height: 40px
         padding: 0
-        flex-direction: column
+        flex-direction: row
+        align-items: center
 
     &__logo
         height: 20px
 
     &__input-box
-        align-self: flex-start
+        margin-left: auto
+        display: none
+
         @media (min-width: screen-tablet-min)
             align-self: flex-end
 
@@ -33,14 +36,18 @@
                 color: #fff
 
             + m-placeholder()
-                color: #fff
+                color: rgba(255, 255, 255, .75)
 
         .input-box__icon
             color: #fff
 
+            &:hover
+                color: #fff
+
 
     &__breadcrumb
         line-height: inherit
+        margin-left: get-spacing(1)
         &__item
             font-size: 13px
             color: #fff
@@ -48,3 +55,7 @@
 
     &--is-fixed
         background-color: rgba(28, 131, 176, .9)
+        position: fixed
+
+        &__input-box
+            display: initial

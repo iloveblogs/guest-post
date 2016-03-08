@@ -1,8 +1,10 @@
 .blog-list
+    max-width: 960px
+    margin: 0 auto
+
     + element(title)
         color: #666
-        max-width: 960px
-        margin: get-spacing(3) auto get-spacing(1) auto
+        margin: get-spacing(3) 0 get-spacing(1) 0
         padding: 0 get-spacing(2) 0 (get-spacing(2) + get-spacing(2))
         font-weight: 400
         font-size: 16px
@@ -11,8 +13,7 @@
 
     + element(subtitle)
         color: #666
-        max-width: 960px
-        margin: 0 auto get-spacing(1) auto
+        margin: 0 0 get-spacing(1) 0
         padding: 0 get-spacing(2) 0 (get-spacing(2) + get-spacing(2))
         font-size: 12px
         @media (min-width: screen-tablet-min)
@@ -33,4 +34,6 @@
             @media (min-width: screen-tablet-min)
                 flex: "1 0 calc(33% - %s )" %get-spacing(2)
 
-
+    + element(button)
+        margin: get-spacing(2) auto
+        display: block

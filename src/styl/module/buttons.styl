@@ -1,0 +1,44 @@
+generate-button(button-color)
+    background-color: button-color
+    border-radius: .4rem
+    border: 1px solid darken(button-color, 10%)
+    color: #fff
+    cursor: pointer
+    display: inline-block
+    font-weight: 800
+    letter-spacing: .1rem
+    outline: none
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    transition: all .3s cubic-bezier(0.420, 0.000, 0.580, 1.000)
+    white-space: nowrap
+
+    &:hover
+        background-color: tint(button-color, 15%)
+
+    &:active
+        background-color: shade(button-color, 15%)
+        box-shadow: none
+
+.btn
+    generate-button(#1c83b0)
+
+    + modifier(is-small)
+        font-size: 10px
+        line-height: 22px
+        padding: 4px get-spacing(1)
+
+    + modifier(is-normal)
+        font-size: 12px
+        line-height: 32px
+        padding: 4px get-spacing(2)
+
+    + modifier(success)
+        generate-button(#2ecc71)
+
+    + modifier(info)
+        generate-button(#2e8ece)
+
+    + modifier(featured)
+        generate-button(#ff1654)

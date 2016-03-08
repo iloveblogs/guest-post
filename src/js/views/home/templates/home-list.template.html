@@ -2,16 +2,22 @@
     <jumbotron></jumbotron>
 
     <section class="blog-list">
+
         <h2 class="blog-list__title">
             <strong>Confira a lista:</strong>
             <loader-inline ng-show='vc.isLoadingPromise'></loader-inline>
             <span ng-show='!vc.isLoadingPromise'>175 blogs.</span>
         </h2>
+
         <p class="blog-list__subtitle">Ou <a href>adicione agora mesmo seu blog.</a></p>
-        <div class="blog-list__flex-grid">
-            <blog-box blog='blog.json' ng-repeat='blog in vc.blogs' class="blog-list__flex-grid__item"></blog-box>
-            <button>Carregar mais</button>
+
+        <div ng-show='!vc.isLoadingPromise'>
+            <div class="blog-list__flex-grid">
+                <blog-box blog='blog.json' ng-repeat='blog in vc.blogs' class="blog-list__flex-grid__item"></blog-box>
+            </div>
+            <button class='btn btn--is-normal btn--featured blog-list__button p-display-block'>Carregar mais</button>
         </div>
+
     </section>
 
 </div>

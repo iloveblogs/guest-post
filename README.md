@@ -1,5 +1,7 @@
 # Blogs que aceitam guest post
 
+[![Join the chat at https://gitter.im/iloveblogs/guest-post](https://badges.gitter.im/iloveblogs/guest-post.svg)](https://gitter.im/iloveblogs/guest-post?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ![Imagem para background do projeto](https://raw.githubusercontent.com/iloveblogs/guest-post/master/readme-background.png)
 
 Cansado de escrever posts sozinhos para o seu blog? Não aguenta mais não ter contato com outros blogueiros da internet? Morrendo de curiosidade para saber quais outros blogs aceitariam um post seu? Quer que outras pessoas escrevam para seu blog?

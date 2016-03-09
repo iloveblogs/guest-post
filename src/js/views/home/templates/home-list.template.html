@@ -1,21 +1,33 @@
 <div>
+
     <jumbotron></jumbotron>
 
     <section class="blog-list">
 
         <h2 class="blog-list__title">
             <strong>Confira a lista:</strong>
-            <loader-inline ng-show='vc.isLoadingPromise'></loader-inline>
-            <span ng-show='!vc.isLoadingPromise'>175 blogs.</span>
+            <loader-inline ng-show='vc.isLoadingMoreBlogs'></loader-inline>
+            <span ng-show='!vc.isLoadingMoreBlogs'>175 blogs.</span>
         </h2>
 
         <p class="blog-list__subtitle">Ou <a href>adicione agora mesmo seu blog.</a></p>
 
-        <div ng-show='!vc.isLoadingPromise'>
+        <div ng-show='!vc.isLoadingMoreBlogs'>
             <div class="blog-list__flex-grid">
-                <blog-box blog='blog.json' ng-repeat='blog in vc.blogs' class="blog-list__flex-grid__item"></blog-box>
+
+                <blog-box blog='blog.json'
+                        ng-repeat='blog in vc.vm.blogList'
+                        class="blog-list__flex-grid__item">
+                </blog-box>
+
             </div>
-            <button class='btn btn--is-normal btn--featured blog-list__button p-display-block'>Carregar mais</button>
+            <button class='btn btn--is-normal btn--featured blog-list__button p-display-block'
+                    ng-click='vc.loadMoreBlogsAndPaginate()'>
+                <span ng-show='!vc.isLoadingMoreBlogs'>Carregar mais </span>
+                <span ng-show='vc.isLoadingMoreBlogs'>
+                    Carregando mais <loader-inline></loader-inline>
+                </span>
+            </button>
         </div>
 
     </section>

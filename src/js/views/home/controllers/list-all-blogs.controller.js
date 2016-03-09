@@ -4,14 +4,15 @@
 
     angular.module('guest-post.views.home').controller('ListAllBlogsController', ListAllBlogsController);
 
-    function ListAllBlogsController(AlertsModel, SheetApi){
+    function ListAllBlogsController(ListBlogsModel){
         var vc = this;
-        var promise = SheetApi.getAllBlogs({pageStart: 0, pageSize: 12});
-        vc.isLoadingPromise = true;
+        vc.vm = ListBlogsModel;
 
-        promise.success(function(blogs){
-            vc.blogs = blogs.query.results.json;
-            vc.isLoadingPromise = false;
-        });
+        vc.loadMoreBlogsAndPaginate = loadMoreBlogsAndPaginate();
+
+        function loadMoreBlogsAndPaginate(){
+            vc.vm.loadMoreBlogs();
+        }
+
     }
 })();

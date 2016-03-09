@@ -1,11 +1,3 @@
-if(!window.GUEST){
-    var GUEST = {};
-}
-
-if(!GUEST.angularDependencies){
-    GUEST.angularDependencies = [];
-}
-
 (function(){
     'use strict';
 

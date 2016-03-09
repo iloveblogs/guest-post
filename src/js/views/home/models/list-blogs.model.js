@@ -32,7 +32,7 @@
 
             promiseToGetMoreBlogs.success(function(blogs){
                 model.blogList = blogs.query.results.json;
-                console.log(model);
+                model.pageNumber++;
             }).finally(function(){
                 model.isLoadingMoreBlogs = false;
             });

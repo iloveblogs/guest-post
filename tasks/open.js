@@ -17,7 +17,7 @@ var browser = os.platform() === 'linux' ?
 return gulp.task('open', function(){
 			gulp.src(__filename)
 				.pipe(open({
-	    				uri: 'http://localhost:4000',
+	    				uri: 'http://localhost:4000/#/',
 	    				app: browser
     				}));
 		});

@@ -22,11 +22,9 @@
 
             </div>
             <button class='btn btn--is-normal btn--featured blog-list__button p-display-block'
-                    ng-click='vc.loadMoreBlogsAndPaginate()'>
-                <span ng-show='!vc.isLoadingMoreBlogs'>Carregar mais </span>
-                <span ng-show='vc.isLoadingMoreBlogs'>
-                    Carregando mais <loader-inline></loader-inline>
-                </span>
+                    ng-click='vc.loadMoreBlogsAndPaginate()'
+                    ng-disabled='vc.isLoadingMoreBlogs'>
+                <span ng-show='!vc.isLoadingMoreBlogs'>Carregar mais blogs</span>
             </button>
         </div>
 

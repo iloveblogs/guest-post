@@ -6,13 +6,12 @@
 
         <h2 class="blog-list__title">
             <strong>Confira a lista:</strong>
-            <loader-inline ng-show='vc.isLoadingMoreBlogs'></loader-inline>
-            <span ng-show='!vc.isLoadingMoreBlogs'>175 blogs.</span>
+            <span>175 blogs.</span>
         </h2>
 
         <p class="blog-list__subtitle">Ou <a href>adicione agora mesmo seu blog.</a></p>
 
-        <div ng-show='!vc.isLoadingMoreBlogs'>
+        <div ng-show='!vc.vm.isLoadingMoreBlogs'>
             <div class="blog-list__flex-grid">
 
                 <blog-box blog='blog.json'
@@ -23,8 +22,11 @@
             </div>
             <button class='btn btn--is-normal btn--featured blog-list__button p-display-block'
                     ng-click='vc.loadMoreBlogsAndPaginate()'
-                    ng-disabled='vc.isLoadingMoreBlogs'>
-                <span ng-show='!vc.isLoadingMoreBlogs'>Carregar mais blogs</span>
+                    ng-disabled='vc.vm.isLoadingMoreBlogs'>
+                <span ng-show='!vc.vm.isLoadingMoreBlogs'>Carregar mais blogs</span>
+                <span ng-show='vc.vm.isLoadingMoreBlogs'>
+                    Carregando mais blogs <loader-inline></loader-inline>
+                </span>
             </button>
         </div>
 

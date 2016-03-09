@@ -11,7 +11,6 @@
         };
 
         ListBlogsModel.init(pageParams);
-        ListBlogsModel.loadMoreBlogs();
     }
 
 })();

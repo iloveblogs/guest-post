@@ -31,7 +31,13 @@
             var promiseToGetMoreBlogs = SheetApi.getAllBlogs(pageParams);
 
             promiseToGetMoreBlogs.success(function(blogs){
-                model.blogList = blogs.query.results.json;
+                if(!model.blogList) {
+                    model.blogList = [];
+                }
+                model.blogList = model.blogList.concat(blogs.query.results.json);
+                console.log(model.blogList);
+
+
                 model.pageNumber++;
             }).finally(function(){
                 model.isLoadingMoreBlogs = false;

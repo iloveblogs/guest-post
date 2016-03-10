@@ -1,0 +1,9 @@
+reveal-elements-by-steps(steps)
+   animation: reveal-opacity 2s
+   opacity: 0
+   animation-fill-mode: forwards
+
+   for i in (1..steps)
+      &:nth-child({i})
+         animation-delay: .1s * i
+

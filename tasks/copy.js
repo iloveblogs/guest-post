@@ -9,17 +9,14 @@ module.exports = function() {
 
     var angularSourceFolder = ['./assets/angular/angular.js'];
     var uiRouterSourceFolder = ['./assets/angular-ui-router/release/angular-ui-router.min.js'];
-    var locationUpdateSourceFolder = ['./assets/angular-location-update/angular-location-update.js'];
 
     var angularCopyOptions = {prefix: 2};
     var imagesCopyOptions = {prefix: 2};
     var uiRouterCopyOptions = {prefix: 3};
-    var locationUpdateOptions = {prefix: 2};
 
     var angularCopy = gulp.src(angularSourceFolder).pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
     var uiRouterCopy = gulp.src(uiRouterSourceFolder).pipe(gulpCopy(javascriptDestFolder, uiRouterCopyOptions));
     var imagesCopy = gulp.src(['./src/images/**/*.*']).pipe(gulpCopy('./build/images', imagesCopyOptions));
-    var locationUpdateCopy = gulp.src(locationUpdateSourceFolder).pipe(gulpCopy(javascriptDestFolder, locationUpdateOptions));
 
     var jsPath = gulp.src([
         './src/js/**/*.js',
@@ -28,5 +25,5 @@ module.exports = function() {
     ])
     .pipe(gulp.dest('./build/js'));
 
-    return merge(angularCopy, uiRouterCopy, imagesCopy, locationUpdateCopy, jsPath);
+    return merge(angularCopy, uiRouterCopy, imagesCopy, jsPath);
 };

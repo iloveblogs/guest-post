@@ -13,17 +13,39 @@
         <navigation-header></navigation-header>
         <alerts></alerts>
         <main ui-view></main>
-        <footer style='display:none;'>
-            <div class="footer__content">
-                <nav>
-                    <ul class="navigation__center">
-                        <li class="navigation__list-item">LINK</li>
-                        <li class="navigation__list-item">LINK</li>
-                        <li class="navigation__list-item">LINK</li>
-                        <li class="navigation__list-item">LINK</li>
-                        <li class="navigation__list-item">LINK</li>
+        <footer class='page-footer'>
+            <div class="page-footer__content">
+                <div class="col-tablet-5 p-padding-right-2">
+                    <p class="page-footer__title">Blogs que aceitam guest post</p>
+                    <p class='page-footer__text'>
+                        Cansado de escrever posts sozinhos para o seu blog? Não aguenta mais não ter contato com outros blogueiros da internet? Morrendo de curiosidade para saber quais outros blogs aceitariam um post seu? Quer que outras pessoas escrevam para seu blog?
+                    </p>
+                    <p class='page-footer__text'>
+                        Seus problemas acabaram!
+                    </p>
+                    <p class='page-footer__text'>
+                        I love blogs - 2016, alguns direitos reservados.
+                    </p>
+                </div>
+                <div class="col-tablet-3">
+                    <p class="page-footer__title">Principais links</p>
+                    <ul>
+                        <li><a href="">Adicionar blog</a></li>
+                        <li><a href="">Fork no github</a></li>
+                        <li><a href="">Contato</a></li>
+                        <li><a href="">Reportar bug</a></li>
+                        <li><a href="">Nossa proposta</a></li>
+                        <li><a href="">Próximas novidades</a></li>
                     </ul>
-                </nav>
+                </div>
+                <div class="col-tablet-4">
+                    <p class="page-footer__title">Assine a newsletter</p>
+                    <p class="page-footer__text">Deixe o email e não perca novidades na lista de blogs.</p>
+                    <span class="input-box input-box--is-default p-width-100 p-padding-left-0">
+                        <input type="text" placeholder="Adicione seu email" class="input-box__input">
+                        <i class="fa fa-envelope-o input-box__icon"></i>
+                    </span>
+                </div>
             </div>
         </footer>
     </body>

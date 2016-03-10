@@ -3,8 +3,10 @@
     background-color: #fff
     border-radius: 8px
     cursor: pointer
-    transition: all ease-in .5s
     position: relative
+
+    &:hover
+        transform: scale(1.025)
 
     + element(title)
         font-size: 16px
@@ -50,6 +52,7 @@
         padding: get-spacing(2)
         position: relative
         top: 3px // ajuste arbitrário :(
+
         &:hover
             color: #ff1654
             animation: pulse .5s infinite alternate ease-in

@@ -6,39 +6,38 @@
 
     function ListBlogsModel(SheetApi){
         var model = {
-            loadMoreBlogs: loadMoreBlogs,
-            isLoadingMoreBlogs: false,
+            blogGroups: [],
             blogsCount: null,
-            pageNumber: 0,
+            pageCount: 0,
+            init: init,
+            isLoadingMoreBlogs: false,
+            loadMoreBlogs: loadMoreBlogs,
+            pageNumber: 1,
+            pageInitialNumber: 0,
             pageSize: 12,
-            blogList: null,
-            init: init
         };
         return model;
 
         function init(pageParams){
             model.pageNumber = parseInt(pageParams.pageNumber);
+            model.pageInitialNumber = parseInt(pageParams.pageNumber);
         }
 
         function loadMoreBlogs(){
             model.isLoadingMoreBlogs = true;
 
             var pageParams = {
-                pageStartAt: model.pageNumber * model.pageSize,
+                pageStartAt: (model.pageNumber - 1) * model.pageSize,
                 pageSize: model.pageSize
             };
 
             var promiseToGetMoreBlogs = SheetApi.getAllBlogs(pageParams);
 
             promiseToGetMoreBlogs.success(function(blogs){
-                if(!model.blogList) {
-                    model.blogList = [];
-                }
-                model.blogList = model.blogList.concat(blogs.query.results.json);
-                console.log(model.blogList);
+                var blogGroupsLastIndex = model.blogGroups.length;
+                model.blogGroups[blogGroupsLastIndex] = blogs.query.results.json;
+                ++model.pageNumber;
 
-
-                model.pageNumber++;
             }).finally(function(){
                 model.isLoadingMoreBlogs = false;
             });

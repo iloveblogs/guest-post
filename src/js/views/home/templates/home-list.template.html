@@ -11,21 +11,30 @@
 
         <p class="blog-list__subtitle">Ou <a href>adicione agora mesmo seu blog.</a></p>
 
-        <div ng-show='!vc.vm.isLoadingMoreBlogs'>
-            <div class="blog-list__flex-grid">
+        <div>
+            <section ng-repeat='blogGroup in vc.vm.blogGroups' class="blog-list__flex-grid">
+
+                <span class='blog-list__flex-grid__title'>
+                </span>
+
+                <header class="blog-list__flex-grid__header" ng-if='$index > 0'>
+                    <p class="blog-list__flex-grid__header__title">Blogs que aceitam guest post</p>
+                    <p class="blog-list__flex-grid__header__subtitle">
+                        Página {[{ vc.vm.pageInitialNumber + $index }]}
+                    </p>
+                </header>
 
                 <blog-box blog='blog.json'
-                        ng-repeat='blog in vc.vm.blogList'
+                        ng-repeat='blog in blogGroup'
                         class="blog-list__flex-grid__item">
                 </blog-box>
-
-            </div>
-            <button class='btn btn--is-normal btn--featured blog-list__button p-display-block'
+            </section>
+            <button class='btn btn--is-normal blog-list__button p-display-block'
                     ng-click='vc.loadMoreBlogsAndPaginate()'
                     ng-disabled='vc.vm.isLoadingMoreBlogs'>
                 <span ng-show='!vc.vm.isLoadingMoreBlogs'>Carregar mais blogs</span>
                 <span ng-show='vc.vm.isLoadingMoreBlogs'>
-                    Carregando mais blogs <loader-inline></loader-inline>
+                    Carregando blogs <loader-inline></loader-inline>
                 </span>
             </button>
         </div>

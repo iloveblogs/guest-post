@@ -15,10 +15,12 @@
             pageNumber: 1,
             pageInitialNumber: 0,
             pageSize: 12,
+            resetBlogGroups: resetBlogGroups
         };
         return model;
 
         function init(pageParams){
+            model.resetBlogGroups();
             model.pageNumber = parseInt(pageParams.pageNumber);
             model.pageInitialNumber = parseInt(pageParams.pageNumber);
         }
@@ -41,6 +43,10 @@
             }).finally(function(){
                 model.isLoadingMoreBlogs = false;
             });
+        }
+
+        function resetBlogGroups(){
+            model.blogGroups = [];
         }
     };
 

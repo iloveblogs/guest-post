@@ -18,3 +18,32 @@
 
     + element(text)
         line-height: 1.5
+
+    + element(list)
+        padding: 0
+
+        + element(item)
+            list-style: none
+            padding: 0
+            line-height: 2
+
+    + element(link)
+        color: #fff
+        text-decoration: none
+        padding-bottom: 2px
+        border-bottom: 0
+        &:hover
+            text-decoration: underline
+
+    + element(subfooter)
+        padding: 24px
+        margin: 0 auto
+        background-color: hsl(207, 6%, 18%)
+        text-align: center
+        color: #fff
+
+        + element(icon)
+            width: 30px
+            vertical-align: middle
+            margin-right: get-spacing(1)
+            font-size: 30px

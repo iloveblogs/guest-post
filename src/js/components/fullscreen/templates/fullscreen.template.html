@@ -1,0 +1,12 @@
+<div class="fullscreen">
+    <div class="fullscreen__overlay" ng-click='vc.vm.closeFullscreen()'></div>
+    <div class="fullscreen__modal">
+        <i class="fullscreen__modal__close-icon fa fa-times" ng-click='vc.vm.closeFullscreen()'></i>
+        <header class="fullscreen__modal__header">
+            <h2 class="fullscreen__modal__title" ng-bind='vc.vm.fullscreenTitle'></h2>
+        </header>
+        <div class="fullscreen__modal__body">
+            <ng-transclude></ng-transclude>
+        </div>
+  </div>
+</div>

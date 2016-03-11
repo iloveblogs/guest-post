@@ -1,0 +1,54 @@
+.fullscreen
+    z-index: get-z-index(fullscreen)
+    position: fixed
+
+    + element(overlay)
+        position: fixed
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        background-color: rgba(0, 0, 0, .6)
+        z-index: get-z-index(fullscreen-overlay)
+
+    + element(modal)
+        z-index: get-z-index(fullscreen-modal)
+        max-width: "(100% - %s )" %get-spacing(2)
+        position: fixed
+        background-color: #fff
+        border-radius: 8px
+        overflow: hidden
+        box-shadow: 0 0 5px rgba(51, 51, 51, .6)
+        transform: translate(-50%, -50%)
+        top: 50%
+        left: 50%
+
+        + element(header)
+            padding: get-spacing(2)
+            background-color: #fff
+            margin: 0
+            border-radius: 8px 8px 0 0
+            color: #333
+
+        + element(title)
+            font-size: 16px
+            margin: 0
+            max-width: calc(100% - 44px)
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            font-weight: 600
+            word-wrap: normal
+
+        + element(close-icon)
+            float: right
+            padding: get-spacing(2)
+            line-height: 23px
+            cursor: pointer
+            font-size: 16px
+
+        + element(body)
+            border-top: 1px solid hsl(0, 0%, 88%)
+            background-color: #e9e9e9
+            padding: get-spacing(2)
+            color: #333

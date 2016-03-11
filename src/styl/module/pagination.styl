@@ -1,0 +1,25 @@
+.pagination
+    font-size: 14px
+
+    @media(min-width: $screen-tablet-min)
+        font-size: 16px
+
+    + element(list)
+        list-style: none
+        text-align: center
+        margin: 0
+        padding: get-spacing(1) 0
+        border-top: 1px solid rgb(233, 233, 233)
+        border-bottom: 1px solid rgb(233, 233, 233)
+
+        + element(item)
+            display: inline-block
+            padding: 0 get-spacing(1)
+            border-right: 1px solid rgb(233, 233, 233)
+
+            &:last-child
+                border-right: 0
+
+        + element(link)
+            text-decoration: none
+            border: 0

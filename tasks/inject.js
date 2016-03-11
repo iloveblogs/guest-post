@@ -21,7 +21,7 @@ module.exports = function() {
 	];
 
 	var injectOptions = {
-		ignorePath: 'build/'
+        ignorePath: 'build/'
 	};
 
 	return gulp.src('src/index.html')

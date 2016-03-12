@@ -14,9 +14,13 @@
         <navigation-header></navigation-header>
         <alerts></alerts>
         <main ui-view></main>
+        <page-footer></page-footer>
+        <fullscreen ng-show='vc.isAddBlogOpen'>
+            <add-new-blog></add-new-blog>
+        </fullscreen>
     </body>
     <!-- inject:js -->
-    <script src="/js/lib/angular.min.js"></script>
+    <script src="/js/lib/angular.js"></script>
     <script src="/js/lib/angular-ui-router.min.js"></script>
     <script src="/js/utils.js"></script>
     <script src="/js/base.js"></script>
@@ -26,22 +30,42 @@
     <script src="/js/components/ajax/ajax.module.js"></script>
     <script src="/js/components/alerts/alerts.module.js"></script>
     <script src="/js/components/blog-box/blog-box.module.js"></script>
+    <script src="/js/components/fullscreen/fullscreen.module.js"></script>
+    <script src="/js/components/jumbotron/jumbotron.module.js"></script>
+    <script src="/js/components/loader-inline/loader-inline.module.js"></script>
     <script src="/js/components/navigation-header/navigation-header.module.js"></script>
+    <script src="/js/components/page-footer/page-footer.module.js"></script>
+    <script src="/js/components/pagination/pagination.module.js"></script>
     <script src="/js/views/home/home.module.js"></script>
+    <script src="/js/views/novo/novo.module.js"></script>
     <script src="/js/api/sheet/sheet-api.run.js"></script>
     <script src="/js/components/alerts/directives/alerts.directive.js"></script>
     <script src="/js/components/blog-box/directives/blog-box.directive.js"></script>
+    <script src="/js/components/fullscreen/directives/fullscreen.directive.js"></script>
+    <script src="/js/components/loader-inline/directives/loader-inline.directive.js"></script>
+    <script src="/js/components/jumbotron/directives/jumbotron.directive.js"></script>
     <script src="/js/components/navigation-header/directives/navigation-header.directive.js"></script>
+    <script src="/js/components/page-footer/directives/page-footer.directive.js"></script>
+    <script src="/js/components/pagination/directives/pagination.directive.js"></script>
     <script src="/js/views/home/directives/list-all-blogs.directive.js"></script>
+    <script src="/js/views/novo/directives/add-new-blog.directive.js"></script>
     <script src="/js/filter/remove-url-parts.filter.js"></script>
     <script src="/js/components/ajax/ajax.model.js"></script>
+    <script src="/js/components/fullscreen/fullscreen.controller.js"></script>
     <script src="/js/views/home/home.routes.js"></script>
+    <script src="/js/views/novo/novo.routes.js"></script>
     <script src="/js/api/sheet/models/sheet-api.model.js"></script>
     <script src="/js/components/alerts/controllers/alerts.controller.js"></script>
     <script src="/js/components/alerts/models/alerts.model.js"></script>
     <script src="/js/components/blog-box/controllers/blog-box.controller.js"></script>
+    <script src="/js/components/fullscreen/controllers/fullscreen.controller.js"></script>
+    <script src="/js/components/fullscreen/models/fullscreen.model.js"></script>
     <script src="/js/components/navigation-header/controllers/navigation-header.controller.js"></script>
     <script src="/js/components/navigation-header/models/navigation-header.model.js"></script>
-    <script src="/js/views/home/controllers/list-all-blogs.controller.js"></script>
+    <script src="/js/views/home/controllers/list-blogs-directive.controller.js"></script>
+    <script src="/js/views/home/controllers/list-blogs-page.controller.js"></script>
+    <script src="/js/views/home/models/list-blogs.model.js"></script>
+    <script src="/js/views/novo/controllers/add-new-blog-directive.controller.js"></script>
+    <script src="/js/views/novo/controllers/add-new-blog-page.controller.js"></script>
     <!-- endinject -->
 </html>

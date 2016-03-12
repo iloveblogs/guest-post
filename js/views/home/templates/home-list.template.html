@@ -1,20 +1,43 @@
 <div>
-    <header class="jumbotron">
-        <div class="jumbotron__content">
-            <h1 class="jumbotron__title">Blogs que aceitam guest post</h1>
-            <h2 class='jumbotron__subtitle'>
-                Mais de 150 blogs sobre assuntos variados que aceitam posts de convidados.
-            </h2>
-            <a href="/sobre" class="jumbotron__main-link">Conheça nossa proposta.</a></h2>
-            <span class="input-box">
-                <input type="text" placeholder="Encontre um blog" class='input-box__input'>
-                <i class="fa fa-search input-box__icon"></i>
-            </span>
-        </div>
-    </header>
 
-    <img src="images/animat-essential/search/animat-search-color.gif" ng-if='vc.isLoadingPromise'>
-    <div class="blog-box-flex-list">
-        <blog-box blog='blog.json' ng-repeat='blog in vc.blogs' class="blog-box-flex-item"></blog-box>
-    </div>
+    <jumbotron></jumbotron>
+
+    <section class="blog-list">
+
+        <h2 class="blog-list__title">
+            <strong>Confira a lista:</strong>
+            <span>175 blogs.</span>
+        </h2>
+
+        <p class="blog-list__subtitle">Ou <a href>adicione agora mesmo seu blog.</a></p>
+
+        <div>
+            <section ng-repeat='blogGroup in vc.vm.blogGroups' class="blog-list__flex-grid">
+
+                <span class='blog-list__flex-grid__title'>
+                </span>
+
+                <header class="blog-list__flex-grid__header" ng-if='$index > 0'>
+                    <p class="blog-list__flex-grid__header__title">Blogs que aceitam guest post</p>
+                    <p class="blog-list__flex-grid__header__subtitle">
+                        Página {[{ vc.vm.pageInitialNumber + $index }]}
+                    </p>
+                </header>
+
+                <blog-box blog='blog.json'
+                        ng-repeat='blog in blogGroup'
+                        class="blog-list__flex-grid__item">
+                </blog-box>
+            </section>
+            <button class='btn btn--is-normal blog-list__button p-display-block'
+                    ng-click='vc.loadMoreBlogsAndPaginate()'
+                    ng-disabled='vc.vm.isLoadingMoreBlogs'>
+                <span ng-show='!vc.vm.isLoadingMoreBlogs'>Carregar mais blogs</span>
+                <span ng-show='vc.vm.isLoadingMoreBlogs'>
+                    Carregando blogs <loader-inline></loader-inline>
+                </span>
+            </button>
+        </div>
+    </section>
+    <pagination></pagination>
 </div>

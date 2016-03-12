@@ -13,9 +13,11 @@
         <navigation-header></navigation-header>
         <alerts></alerts>
         <main ui-view></main>
-        <pagination></pagination>
         <page-footer></page-footer>
+        <fullscreen ng-show='vc.isAddBlogOpen'>
+            <add-new-blog></add-new-blog>
+        </fullscreen>
+    </body>
     <!-- inject:js -->
     <!-- endinject -->
-    </body>
 </html>

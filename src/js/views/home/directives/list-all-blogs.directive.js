@@ -1,18 +1,18 @@
 (function(){
 
-	'use strict';
+    'use strict';
 
-	angular.module('guest-post.views.home').directive('listAllBlogs', listAllBlogs);
+    angular.module('guest-post.views.home').directive('listAllBlogs', listAllBlogs);
 
-	function listAllBlogs(){
-		var directive = {
-			restrict: 'E',
-			replace: true,
-			templateUrl: '/js/views/home/templates/home-list.template.html',
-			controller: 'ListBlogsDirectiveController as vc',
-			bindToController: true
-		};
-		return directive;
-	}
+    function listAllBlogs(){
+        var directive = {
+            restrict: 'E',
+            replace: true,
+            templateUrl: '/js/views/home/templates/home-list.template.html',
+            controller: 'ListBlogsDirectiveController as vc',
+            bindToController: true
+        };
+        return directive;
+    }
 
 })();

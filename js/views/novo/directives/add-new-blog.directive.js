@@ -8,7 +8,7 @@
 		var directive = {
 			restrict: 'E',
 			replace: true,
-			templateUrl: jsPath('views/novo/templates/add-new-blog.template.html'),
+			templateUrl: jsFolder('views/novo/templates/add-new-blog.template.html'),
 			controller: 'AddNewBlogDirectiveController as vc',
 			bindToController: true
 		};

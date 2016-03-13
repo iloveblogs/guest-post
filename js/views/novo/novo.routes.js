@@ -8,7 +8,7 @@
     function configNovo($stateProvider, $urlRouterProvider){
 
 	 	var stateNovo = {
-	 		url: '/novo',
+	 		url: '/guest-post/novo',
 	 		template: '<add-new-blog></add-new-blog>',
             controller: 'AddNewBlogPageController as vc'
 	 	};

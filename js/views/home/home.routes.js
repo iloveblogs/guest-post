@@ -8,13 +8,13 @@
     function configHome($stateProvider, $urlRouterProvider){
 
 	 	var stateHome = {
-	 		url: '/',
+	 		url: '/guest-post/',
 	 		template: '<list-all-blogs></list-all-blogs>',
             controller: 'ListBlogsPageController as vc'
 	 	};
 
         var stateHomePagination = {
-            url: '/pagina/{pageNumber:[0-9]{1,}}',
+            url: '/guest-post/pagina/{pageNumber:[0-9]{1,}}',
             template: '<list-all-blogs></list-all-blogs>',
             controller: 'ListBlogsPageController as vc'
         };

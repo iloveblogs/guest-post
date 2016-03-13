@@ -8,7 +8,7 @@
         var directive = {
             restrict: 'E',
             replace: true,
-            templateUrl: '/js/views/home/templates/home-list.template.html',
+            templateUrl: jsPath('views/home/templates/home-list.template.html'),
             controller: 'ListBlogsDirectiveController as vc',
             bindToController: true
         };

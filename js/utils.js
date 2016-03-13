@@ -6,6 +6,10 @@ if(!GUEST.angularDependencies){
     GUEST.angularDependencies = [];
 }
 
+function jsFolder(jsRelativePath){
+    var jsAbsolutePath = '/guest-post/js/'+jsRelativePath;
+}
+
 (function(){
     'use strict';
 

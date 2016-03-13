@@ -13,7 +13,7 @@
             controller: 'BlogBoxController',
             controllerAs: 'vc',
             bindToController: true,
-            templateUrl: '/js/components/blog-box/templates/blog-box.template.html',
+            templateUrl: jsFolder('components/blog-box/templates/blog-box.template.html'),
         };
         return directive;
     }

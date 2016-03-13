@@ -6,7 +6,7 @@
     function jumbotronDirective(){
         var directive = {
             restrict: 'E',
-            templateUrl: '/js/components/jumbotron/templates/jumbotron.template.html',
+            templateUrl: jsFolder('/js/components/jumbotron/templates/jumbotron.template.html'),
             scope: {},
             replace: true
         };

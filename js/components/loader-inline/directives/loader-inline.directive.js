@@ -6,7 +6,7 @@
     function loaderInlineDirective(){
         var directive = {
             restrict: 'E',
-            templateUrl: '/js/components/loader-inline/templates/loader-inline.template.html',
+            templateUrl: jsFolder('/js/components/loader-inline/templates/loader-inline.template.html'),
             scope: {},
             replace: true
         };

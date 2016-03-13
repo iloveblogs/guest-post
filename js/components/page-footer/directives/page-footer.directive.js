@@ -6,7 +6,7 @@
     function PageFooterDirective(){
         var directive = {
             restrict: 'E',
-            templateUrl: '/js/components/page-footer/templates/page-footer.template.html',
+            templateUrl: jsFolder('/js/components/page-footer/templates/page-footer.template.html'),
             scope: {},
             replace: true
         };

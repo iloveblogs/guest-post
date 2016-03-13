@@ -13,7 +13,7 @@
             controller: 'NavigationHeaderController',
             controllerAs: 'vc',
             bindToController: true,
-            templateUrl: '/js/components/navigation-header/templates/navigation-header.template.html',
+            templateUrl: jsFolder('/js/components/navigation-header/templates/navigation-header.template.html'),
         };
         return directive;
     }

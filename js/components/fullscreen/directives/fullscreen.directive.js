@@ -6,7 +6,7 @@
     function fullscreenDirective(){
         var directive = {
             restrict: 'E',
-            templateUrl: '/js/components/fullscreen/templates/fullscreen.template.html',
+            templateUrl: jsFolder('/js/components/fullscreen/templates/fullscreen.template.html'),
             scope: {},
             replace: true,
             transclude: true,

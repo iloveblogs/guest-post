@@ -1,6 +1,49 @@
+.alerts
+    position: fixed
+    margin: get-spacing(1) auto
+    max-width: 960px
+    transform: translate(-50%, 0)
+    width: 100%
+    z-index: get-z-index(alerts)
+    left: 50%
+
 .alert
-    &-success
-        font-size: 15px
-        width: 100%
-        border: 1px solid blue
-        background: green
+    border-radius: 8px
+    padding: get-spacing(1)
+    position: relative
+    font-size: 15px
+    width: 100%
+    color: #333
+    border-width: 1px
+    border-style: solid
+    box-shadow: 0 2px 1px rgba(170, 170, 170 , .25)
+
+    + modifier(success)
+        background-color: #dff5d0
+        border-color: darken(#dff5d0, 20)
+
+    + modifier(warning)
+        background-color: #ffe0a3
+        border-color: darken(#ffe0a3, 20)
+
+    + modifier(error)
+        background-color: #fdd
+        border-color: darken(#fdd, 20)
+
+    + modifier(info)
+        background-color: #e7eaf2
+        border-color: darken(#e7eaf2, 20)
+
+    + element(close-icon)
+        position: absolute
+        top: 0
+        right: 0
+        cursor: pointer
+        padding: get-spacing(1)
+
+    + element(icon)
+        margin-right: get-spacing(1)
+
+    + .alert
+        margin-top: get-spacing(1)
+

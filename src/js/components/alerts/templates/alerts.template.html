@@ -1,12 +1,19 @@
-<div ng-show='vc.vm.alerts.length > 0'>
+<div ng-show='vc.vm.alerts.length > 0' class='alerts'>
     <div ng-repeat='alert in vc.vm.alerts'
         ng-class='{
-            "alert-success": alert.type === "success",
-            "alert-error": alert.type === "error",
-            "alert-warning": alert.type === "warning",
-            "alert-info": alert.type === "info"
-        }'>
+            "alert--success": alert.type === "success",
+            "alert--error": alert.type === "error",
+            "alert--warning": alert.type === "warning",
+            "alert--info": alert.type === "info"
+        }'
+        class='alert'>
+        <i class='alert__icon fa' ng-class='{
+            "fa-check": alert.type === "success",
+            "fa-exclamation-triangle": alert.type === "error",
+            "fa-exclamation-circle": alert.type === "warning",
+            "fa-info": alert.type === "info"
+        }'></i>
         {[{alert.message}]}
-        <span ng-click='vc.vm.closeAlert(alert)'>&times;</span>
+        <span ng-click='vc.vm.closeAlert(alert)' class='alert__close-icon'>&times;</span>
     </div>
 </div>

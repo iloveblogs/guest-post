@@ -16,6 +16,7 @@ Cadastre agora mesmo seu blog na nossa lista de blogs que aceitam guest post!
 
 ```bash
 npm install
+bower install
 ```
 
 ### 2. Instalou as dependências. Rode o projeto:

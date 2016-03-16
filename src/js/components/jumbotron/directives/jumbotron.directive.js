@@ -8,7 +8,10 @@
             restrict: 'E',
             templateUrl: '/js/components/jumbotron/templates/jumbotron.template.html',
             scope: {},
-            replace: true
+            replace: true,
+            controller: 'JumbotronController',
+            controllerAs: 'vc',
+            bindToController: true
         };
         return directive;
     }

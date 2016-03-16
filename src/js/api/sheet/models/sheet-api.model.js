@@ -29,13 +29,13 @@
             var restApi = {
                 getAllBlogs: getAllBlogs,
                 getByCategoria: getByCategoria,
+                getByDescricao: getByDescricao,
                 getById: getById,
                 getByIds: getByIds,
                 getByUrl: getByUrl,
                 configure: configure
             };
             return restApi;
-
 
             function _parseFiltersToQuery(filters){
                 var baseQuery = 'select json from json';
@@ -46,6 +46,17 @@
 
                 baseQuery += ' where url="'+restApi.configure.sheetsuBaseUrl+'"';
                 return baseQuery;
+            }
+
+            function getByDescricao(descricao, filters){
+                var filters = filters || {};
+                var query = _parseFiltersToQuery(filters);
+                query+=' and json.descricao like "%'+descricao+'%"';
+                var params = {
+                    q: query,
+                    format: 'json'
+                };
+                return AjaxModel.get(baseYQLUrl, params);
             }
 
             function getById(id, filters){

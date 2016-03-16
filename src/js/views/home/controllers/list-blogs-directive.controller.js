@@ -13,7 +13,13 @@
         function loadMoreBlogsAndPaginate(){
             vc.vm.loadMoreBlogs();
             var nextPageNumber = vc.vm.pageNumber;
-            $state.go('home-pagination', {pageNumber: vc.vm.pageNumber}, {notify: false});
+            var stateNameToGo = vc.vm.pageType === 'search' ? 'home-search-pagination' : 'home-pagination';
+            var stateParams = {
+                pageNumber: vc.vm.pageNumber,
+                searchValue: vc.vm.searchValue
+            };
+
+            $state.go(stateNameToGo, stateParams, {notify: false});
         }
 
     }

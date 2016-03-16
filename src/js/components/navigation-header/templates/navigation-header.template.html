@@ -12,8 +12,8 @@
         </span>
 
         <span class="input-box input-box--is-default navigation-header__input-box p-margin-left-auto">
-            <input type="text" placeholder="Encontre um blog" class='input-box__input'>
-            <i class="fa fa-search input-box__icon"></i>
+            <input type="text" placeholder="Encontre um blog" class='input-box__input' ng-model='vc.searchValue'>
+            <i class="fa fa-search input-box__icon" ng-click='vc.searchByInput()'></i>
         </span>
     </div>
 </div>
